@@ -1,0 +1,20 @@
+COMO GERAR APK E EXE SEM TER COMPUTADOR
+
+Este pacote inclui um workflow do GitHub Actions para compilar Android (APK de teste/debug) e Windows (instalador EXE) na nuvem.
+
+PASSOS PELO CELULAR
+1. Crie uma conta em https://github.com/ ou entre na sua conta.
+2. Crie um repositório novo, por exemplo: dinnoemulator.
+3. No repositório, use Add file > Upload files e envie TODO o conteúdo deste ZIP diretamente para a raiz do repositório (incluindo a pasta oculta .github).
+4. Confirme em Commit changes. A branch principal deve se chamar main.
+5. Abra a aba Actions do repositório. Se aparecer, habilite workflows.
+6. Selecione "Build DINNOEMULATOR" e toque em Run workflow.
+7. Aguarde os dois jobs terminarem com sucesso.
+8. Abra a execução concluída e baixe os artefatos DINNOEMULATOR-APK e DINNOEMULATOR-Windows-EXE na seção Artifacts.
+
+NOTAS IMPORTANTES
+- O APK gerado por este fluxo é debug, adequado para teste/instalação manual, não é uma versão assinada de produção para publicar na Play Store.
+- O EXE é um instalador Windows NSIS.
+- A loja online exige configurar Firebase conforme o README.txt. Sem isso, use o modo de teste local.
+- Este projeto executa jogos HTML; não inclui ainda emulação de consoles como PSP/PS1.
+- O GitHub Actions executa a compilação em máquinas na nuvem. O primeiro envio do projeto e o acionamento do workflow precisam ser feitos na interface do GitHub.
